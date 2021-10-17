@@ -1,0 +1,21 @@
+<%- include("../partials/header") -%>
+
+<div class="container mt-4">
+  <%- include("../partials/message") -%>
+  <form action="/forgot" method="POST">
+    <h3>Forgot Password</h3>
+    <div class="form-group">
+      <label class="form-label">Email address</label>
+      <input
+        type="email"
+        name="email"
+        class="form-control"
+        placeholder="Enter email"
+        required
+      />
+    </div>
+
+    <button type="submit" class="btn-login">Send Email</button>
+  </form>
+  <%- include("../partials/footer") -%>
+</div>

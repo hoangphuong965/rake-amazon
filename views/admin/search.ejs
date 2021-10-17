@@ -1,0 +1,32 @@
+<%- include('../partials/header') -%>
+
+<div class="col-9">
+    <div class="container p-3 w-100">
+        <h1 class="mb-4">Search Product</h1>
+        <%- include('../partials/message') -%>
+        <form class="mt-2" id="newpostform" action="/product/search" method="POST">
+            <div class="row mt-5 justify-content-center d-flex">
+                <div class="col-6">
+                    <input type="text" class="form-control" name="asin" placeholder="Enter Product ASIN" required>
+                </div>
+            </div>
+
+            <div class="justify-content-center d-flex mt-4">
+                <button id="fetchBtn" class="btn btn-danger w-25 py-2">Search Product</button>
+            </div>
+        </form>
+
+        <div class=" ml-5 text-left mt-5">
+            <span>Title:</span> <span><%= product.title %></span><br>
+            <span>Price:</span> <span><%= product.newPrice %></span><br>
+            <span>Stock:</span> <span><%= product.newStock %></span><br>
+            <span>Asin:</span> <span><%= product.asin %></span><br>
+            <span>Url:</span> <span style="color: blue;"><a href="<%= product.url %>" target="_blank" >Link to product page</a></span>
+        </div>
+
+    </div>
+</div>
+<%- include('../partials/footer') -%>
+</div>
+
+
